@@ -15,17 +15,17 @@
           <ul class="nav navbar-nav">
             <li><a href="{{ url_for('index') }}">Home</a></li>
             {% if g.user.is_authenticated %}
-            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+              <li><a href="{{ url_for('logout') }}">Logout</a></li>
             {% endif %}
             {% if not g.user.is_authenticated %}
-            <li><a href="{{ url_for('login') }}">Login</a></li>
+              <li><a href="{{ url_for('login') }}">Login</a></li>
             {% endif %}
             {% if not g.user.is_authenticated %}
-            <li><a href="{{ url_for('register') }}">Register</a></li>
+              <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
-            <li><a href="{{ url_for('user_info') }}">User Info</a></li>
+              <li><a href="{{ url_for('user_info') }}">User Info</a></li>
             {% if g.user.is_authenticated %}
-            <li><a href="{{ url_for('search_twitter') }}">Search Twitter</a></li>
+              <li><a href="{{ url_for('search_twitter') }}">Search Twitter</a></li>
             {% endif %}
           </ul>
         </div>

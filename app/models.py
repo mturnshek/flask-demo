@@ -1,8 +1,7 @@
 from app import db
 
-# Users are able to make posts, and see their past posts
+# Users are able to make posts
 class User(db.Model):
-
     __tablename__ = 'user'
 
     username = db.Column(db.String, primary_key=True)

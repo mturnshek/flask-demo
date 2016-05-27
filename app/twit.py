@@ -19,15 +19,18 @@ def print_user_feed():
     for tweet in public_tweets:
         print tweet.text
 
+
 # Prints n tweets which contain search_tag
 def collect_tweets_from_query(search_tag, n):
     # collects tweets
-    all_tweets = tweepy.Cursor(api.search,
-                           q=search_tag,
-                           rpp=100,
-                           result_type="recent",
-                           include_entities=True,
-                           lang="en").items()
+    all_tweets = tweepy.Cursor(
+        api.search,
+        q = search_tag,
+        rpp = 100,
+        result_type = "recent",
+        include_entities = True,
+        lang = "en"
+    ).items()
     # grabs the first n items from all_tweets
     tweets = itertools.islice(all_tweets, n)
     return tweets
