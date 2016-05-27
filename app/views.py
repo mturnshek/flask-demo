@@ -1,6 +1,5 @@
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
-from flask_bootstrap import __version__ as FLASK_BOOTSTRAP_VERSION
 from app import app, db, lm, twit
 import tweepy
 from .forms import LoginForm, RegisterForm, PostForm, TweetsForm
