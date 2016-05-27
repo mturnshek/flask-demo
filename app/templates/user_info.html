@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for u in users %}
+	<div>
+    	<p>
+    		<span class="col-md-1" style="text-align: right;">{{ u.username }}</span>
+    		<span class="col-md-4">{{ u.password }}</span>
+    	</p>
+    	<br>
+    </div>
+    {% endfor %}
+{% endblock %}

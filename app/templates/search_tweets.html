@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+	<p></p>
+	<div class="container">
+		<div class="form-group">
+			<form action="" method="post" name=search_tweets class="form-inline">
+		    	{{ form.hidden_tag() }}
+		  		<input class="form-control" type="text" name="search_tag" />
+		    	<button type="submit" class="btn btn-default">Find Tweets</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="container">
+		{% if tweets %}
+			{% for tweet in tweets %}
+			   	<div>
+			    {{ tweet.created_at }}: {{ tweet.text }}
+			    <p></p>
+			    </div>
+			{% endfor %}
+		{% endif %}
+	</div>
+
+{% endblock %}
